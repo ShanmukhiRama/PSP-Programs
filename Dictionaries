@@ -1,5 +1,36 @@
 #program dictionary of name of persons with their mobile numbers and search for mobile number for given person.
-my_dir=dict()
+my_dir=dict()  #create blank dictionary
 i=1
 while(True):
-  print("Hello")
+  print("Enter name of person"+" #" + str(i)+" =",end=' ')
+  nn=input()
+  print("Enter his/her mobile number=",end=' ')
+  mm=input()
+  my_dir[nn]=mm #add key:value pair to dictionary
+  print()
+  yes_no=input("DO you want to enter more data[Y/N]")
+  if yes_no in ['Y','y']:
+      i+=1
+      continue
+  else:
+      break
+print("\n Current Dictionary :\n")
+print('*'*25)
+print(my_dir)
+print('*'*25)
+print("\n To search names......")
+while(True):
+     print()
+     txt=input("Enter name: ")
+     if txt in my_dir:
+         print("Mobile number of " ,txt,"is",my_dir[txt])
+     else:
+         print(txt,"not found in directory....")
+     print()
+     yes_no=input("DO you want to enter more data[Y/N]")
+     if yes_no in ['Y','y']:
+            continue
+     else:
+            break
+print("\n Program executed successfully....")
+    
