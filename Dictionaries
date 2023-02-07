@@ -1,0 +1,5 @@
+#program dictionary of name of persons with their mobile numbers and search for mobile number for given person.
+my_dir=dict()
+i=1
+while(True):
+  print("Hello")
